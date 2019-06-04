@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>哈味餐廳</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- 使用 materializecss 並從cdn載入-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <!-- 載入 google icon 字型 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 載入 font-awesome 字型 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- 使用自己的css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- 使用絕對路徑載入 jquery 官方cdn 上的 jquery -->
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- 使用 materializecss Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 選單 -->
+    <nav class="white">
+      <div class="nav-wrapper">
+        <a class="brand-logo" href="#"><i class="fa fa-hand-lizard-o"></i> 哈味餐廳</a>
+        <a href="javascript:void(0);" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li class="active"><a href="./">首頁</a></li>
+          <li><a href="#store_info">關於我們</a></li>
+          <li><a href="#food_info">美食菜單</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li class="active"><a href="./">首頁</a></li>
+          <li><a href="#store_info">關於我們</a></li>
+          <li><a href="#food_info">美食菜單</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 網站背景區塊 -->
+    <div class="parallax-container">
+      <h2 class="white-text shadow-text vcenter">
+				與朋友享受美食好時光<br>
+				就在哈味餐廳
+			</h2>
+      <div class="parallax"><img src="images/food_1.jpg"></div>
+    </div>
+
+    <!-- 網站訊息區塊 -->
+    <div class="section white" id="store_info">
+      <div class="row container">
+        <div class="col s12 m6">
+          <h4>一生中不容錯過的哈味餐廳</h4>
+          <p>你喜歡吃水果嗎？有一種水果千萬不能錯過！</p>
+          <p>那就是「哈密瓜」！！！！</p>
+          <p>我們獨創的哈料理～讓你吃了哈哈大笑！身體健康萬事如意！</p>
+        </div>
+
+        <div class="col s12 m6">
+          <h4>有些人喜歡有些人不喜歡！？</h4>
+          <p>趕快來嚐嚐，你就會喜歡我們獨特的哈味！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 網站背景區塊 -->
+    <div class="parallax-container">
+      <h2 class="white-text shadow-text vcenter">
+				我們的五星級米其林大廚！！
+			</h2>
+      <div class="parallax"><img src="images/Baby_Boys_Cooking.jpg"></div>
+    </div>
+
+    <!-- 網站訊息區塊 -->
+    <div class="section teal lighten-4" id="food_info">
+      <div class="row">
+        <div class="col s12 center-align">
+          <h3>超完美哈味菜單</h3>
+        </div>
+        <div class="col s12 m6 l3 center-align">
+          <img src="images/The-Afternoon-Tea-Menu_01.jpg" class="responsive-img"><!-- 圖片有加上 img-responsive 響應式的圖片調整 -->
+        </div>
+        <div class="col s12 m6 l3 center-align">
+          <img src="images/The-Afternoon-Tea-Menu_02.jpg" class="responsive-img"><!-- 圖片有加上 img-responsive 響應式的圖片調整 -->
+        </div>
+        <div class="col s12 m6 l3 center-align">
+          <img src="images/The-Afternoon-Tea-Menu_03.jpg" class="responsive-img"><!-- 圖片有加上 img-responsive 響應式的圖片調整 -->
+        </div>
+        <div class="col s12 m6 l3 center-align">
+          <img src="images/The-Afternoon-Tea-Menu_04.jpg" class="responsive-img"><!-- 圖片有加上 img-responsive 響應式的圖片調整 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 網站背景區塊 -->
+    <div class="parallax-container">
+      <div class="row">
+        <div class="col s12 m4 offset-m4 center-align store-info z-depth-5">
+          <img src="images/haha.jpg">
+          <p>餐廳地址：台南市南台街一號</p>
+          <p>訂位專線：06-2888888</p>
+        </div>
+      </div>
+      <div class="parallax"><img src="images/cooking.jpg"></div>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        //啟動 parallax 背景
+        $('.parallax').parallax();
+
+        //啟動 sideNav 選單效果
+        $(".button-collapse").sideNav();
+
+        /**
+         * 點擊選單，捲動到該位置
+         * 概念：
+         * 當點擊選單中的超連結a時，抓取他href中要前往的目標id #xxx
+         * 找到後，用jquery選擇器找到目標id元素的 scrollTop() 位置y座標
+         * 然後透過jquery animate 方法，將html與body捲動到取得的目標y座標點
+         * 移動後執行一個callback，將點選的超連結，其父元素給予active類別
+         */
+        $("ul li a").on("click", function(){
+        	//取得要移動到哪個id
+        	var a_elm = $(this);
+        	var target_id = a_elm.attr("href");
+        	//要捲到的高度，預設為0
+        	var topTo = 0;
+        	//如果目標，id 不等於 #，代表是有設定其他錨點
+        	if(target_id != "#"){
+        		//topTo就等於要捲到的位置
+        		topTo = $(target_id).position().top;
+        	}
+        	//用jQuery animate方法，把html與body捲到適當的位置
+        	$("html, body").animate({
+        		scrollTop: topTo
+        	}, 600, function(){ //移動速度為600毫秒，完成後做以下事情
+        		//把以己啟動的，先拿掉active
+            $("ul li[class='active']").removeClass('active');
+            //該 a 選單元素的父元素(用.parent()方法取得上一層，並加上 active 類別
+        		a_elm.parent().addClass('active');
+        	});
+        	//回傳 false 代表是阻止 a 超連結前往的動作，不要讓他前往預設的連結
+        	return false;
+        });
+      });
+    </script>
+  </body>
+</html>

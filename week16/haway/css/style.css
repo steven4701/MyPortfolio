@@ -1,0 +1,63 @@
+/**
+ * 引入google的中文字型
+ * 參考老師的github頁面 http://mktsai.github.io/google_chinese_traditional_font/demo.html?f=4
+ */
+@import url(//fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+/* 設定 html, body 高度 為 100％ 與視窗同高*/
+html, body{
+  height:100%;
+}
+
+body {
+  font-family: 'cwTeXYen', sans-serif;/* 網站使用載入的字型 */
+}
+
+nav .brand-logo i{
+  float:none;
+}
+
+nav .brand-logo, nav a, nav ul a{
+  color:#333;
+}
+
+/* 設定 parallax 背景圖高度 */
+.parallax-container {
+  height: 90%;
+}
+
+.section{
+  min-height:600px;
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+.shadow-text{
+  text-shadow: 0px 0px 5px rgba(0,0,0, .8);
+}
+
+.store-info{
+  margin-top:100px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.store-info img{
+  margin-top:20px;
+}
+/**
+ * 有使用到此類別的區塊，會對父元素來說是水平垂直置中
+ */
+.vcenter {
+  position: absolute; /*位置為：相對位置*/
+  left: 50%;	/*離左邊為父類別的50寬*/
+  top: 50%;	/*離上面邊為父類別的50高*/
+  bottom: auto;	/*離下面為父類別的50高*/
+  right: auto;	/*離右邊為父類別的50寬*/
+  /*以下 transform，主要是讓此元素往左移動自己本身寬度的50%，也往上左移動自己本身高度的50%，而前方所加的-xxx-前綴詞，是for不同瀏覽器的*/
+  -webkit-transform: translateX(-50%) translateY(-50%); /* Chrome, newer versions of Opera*/
+  -moz-transform: translateX(-50%) translateY(-50%); /* Firefox */
+  -ms-transform: translateX(-50%) translateY(-50%); /* nternet Explorer */
+  -o-transform: translateX(-50%) translateY(-50%); /* Old versions of Opera */
+  transform: translateX(-50%) translateY(-50%); /* 沒限制，有支援的瀏覽器就會run */
+  text-align: center; /*裡面的文字置中*/
+}
