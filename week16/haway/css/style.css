@@ -14,6 +14,7 @@ body {
 }
 
 nav .brand-logo i{
+  padding-left: 20px;
   float:none;
 }
 
